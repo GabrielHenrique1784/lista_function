@@ -5,12 +5,20 @@
     A = (b * h) / 2
     */
 
-    //Entrada
+    function calcularAreaTriangulo(base, altura) {
+        var area = (base * altura) / 2;
+        return area;
+    }
 
+    var baseTriangulo = parseFloat(prompt("Digite a base do triângulo:"));
+    var alturaTriangulo = parseFloat(prompt("Digite a altura do triângulo:"));
 
-    //Processamento
+    if (!isNaN(baseTriangulo) && !isNaN(alturaTriangulo)) {
+        var areaTriangulo = calcularAreaTriangulo(baseTriangulo, alturaTriangulo);
+        alert("A área do triângulo é " + areaTriangulo);
+    } else {
+        alert("Por favor, insira valores válidos para a base e a altura do triângulo.");
+    }
 
-
-    //Saída
 
 </script>

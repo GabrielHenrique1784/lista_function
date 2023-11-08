@@ -5,12 +5,29 @@
     *A frase (ou palavra) e a letra devem ser fornecidas pelo usuário.
     */
 
-    //Entrada
+    function contarLetraNaFrase(frase, letra) {
+        var count = 0;
+        letra = letra.toLowerCase();
 
+        for (var i = 0; i < frase.length; i++) {
+            var caractere = frase[i].toLowerCase();
+            if (caractere === letra) {
+                count++;
+            }
+        }
 
-    //Processamento
+        return count;
+    }
 
+    var frase = prompt("Digite uma frase ou palavra:");
+    var letra = prompt("Digite a letra que deseja contar na frase:");
 
-    //Saída
+    if (frase && letra) {
+        var quantidade = contarLetraNaFrase(frase, letra);
+        alert("A letra '" + letra + "' aparece " + quantidade + " vez(es) na frase.");
+    } else {
+        alert("Por favor, insira uma frase ou palavra e uma letra para contar.");
+    }
+
 
 </script>

@@ -5,12 +5,19 @@
     IMC = peso / altura²
     */
 
-    //Entrada
+    function calcularIMC(peso, altura) {
+        var imc = peso / (altura * altura);
+        return imc;
+    }
 
+    var peso = parseFloat(prompt("Digite o seu peso em quilogramas:"));
+    var altura = parseFloat(prompt("Digite a sua altura em metros:"));
 
-    //Processamento
-
-
-    //Saída
+    if (!isNaN(peso) && !isNaN(altura) && altura > 0) {
+        var imc = calcularIMC(peso, altura);
+        alert("Seu IMC é: " + imc.toFixed(2));
+    } else {
+        alert("Por favor, insira valores válidos para peso e altura.");
+    }
 
 </script>

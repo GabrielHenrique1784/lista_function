@@ -5,12 +5,19 @@
     C = (F - 32) * 5 / 9
     */
 
-    //Entrada
+    function converterParaCelsius(fahrenheit) {
+        var celsius = (fahrenheit - 32) * 5 / 9;
+        return celsius;
+    }
 
+    var temperaturaFahrenheit = parseFloat(prompt("Digite a temperatura em graus Fahrenheit:"));
 
-    //Processamento
+    if (!isNaN(temperaturaFahrenheit)) {
+        var temperaturaCelsius = converterParaCelsius(temperaturaFahrenheit);
+        alert(temperaturaFahrenheit + " graus Fahrenheit é igual a " + temperaturaCelsius + " graus Celsius.");
+    } else {
+        alert("Por favor, insira uma temperatura válida em graus Fahrenheit.");
+    }
 
-
-    //Saída
 
 </script>

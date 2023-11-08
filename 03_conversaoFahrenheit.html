@@ -5,12 +5,18 @@
     F = (9 * C + 160) / 5
     */
 
-    //Entrada
+    function converterParaFahrenheit(celsius) {
+        var fahrenheit = (9 * celsius + 160) / 5;
+        return fahrenheit;
+    }
 
+    var temperaturaCelsius = parseFloat(prompt("Digite a temperatura em graus Celsius:"));
 
-    //Processamento
-
-
-    //Saída
+    if (!isNaN(temperaturaCelsius)) {
+        var temperaturaFahrenheit = converterParaFahrenheit(temperaturaCelsius);
+        alert(temperaturaCelsius + " graus Celsius é igual a " + temperaturaFahrenheit + " graus Fahrenheit.");
+    } else {
+        alert("Por favor, insira uma temperatura válida em graus Celsius.");
+    }
 
 </script>

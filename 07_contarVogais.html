@@ -6,12 +6,26 @@
     *Para simplificar, não considere vogais acentuadas.
     */
 
-    //Entrada
+    function contarVogais(string) {
+        string = string.toLowerCase();
 
+        var vogais = "aeiou";
+        var contador = 0;
 
-    //Processamento
+        for (var i = 0; i < string.length; i++) {
+            if (vogais.indexOf(string[i]) !== -1) {
+                contador++;
+            }
+        }
 
+        return contador;
+    }
 
-    //Saída
+    var inputString = prompt("Digite uma palavra ou frase:");
+
+    var quantidadeVogais = contarVogais(inputString);
+
+    alert("A quantidade de vogais na string é: " + quantidadeVogais);
+
 
 </script>

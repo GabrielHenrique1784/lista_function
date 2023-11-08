@@ -5,12 +5,19 @@
     Desenvolva um programa que contenha uma função que calcule o cubo desse número. Apresente o resultado para o usuário.
     */
 
-    //Entrada
+    function calcularCubo() {
+        var numero = prompt("Por favor, informe um número inteiro:"); 
+        numero = parseInt(numero); 
 
+        if (!isNaN(numero)) { 
+            var cubo = numero * numero * numero;
+            alert("O cubo de " + numero + " é igual a " + cubo); 
+        } else {
+            alert("Por favor, insira um número inteiro válido."); 
+        }
+    }
 
-    //Processamento
+    calcularCubo();
 
-
-    //Saída
 
 </script>

@@ -7,12 +7,27 @@
     P = 2 * π * r
     */
 
-    //Entrada
+    function calcularAreaCirculo(raio) {
+        var area = Math.PI * Math.pow(raio, 2);
+        return area;
+    }
+
+    function calcularPerimetroCirculo(raio) {
+        var perimetro = 2 * Math.PI * raio;
+        return perimetro;
+    }
+
+    var raioCirculo = parseFloat(prompt("Digite o raio do círculo:"));
+
+    if (!isNaN(raioCirculo)) {
+        var areaCirculo = calcularAreaCirculo(raioCirculo);
+        var perimetroCirculo = calcularPerimetroCirculo(raioCirculo);
+
+        alert("A área do círculo é " + areaCirculo.toFixed(2) + " e o perímetro é " + perimetroCirculo.toFixed(2));
+    } else {
+        alert("Por favor, insira um valor válido para o raio do círculo.");
+    }
 
 
-    //Processamento
-
-
-    //Saída
 
 </script>
